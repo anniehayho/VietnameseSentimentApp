@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "VietnameseSentimentApp",
-    "slug": "VietnameseSentimentApp",
+    "name": "Vietnamese Sentiment Analysis",
+    "slug": "vietnamese-sentiment-analysis",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "vietnamese-sentiment-app",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

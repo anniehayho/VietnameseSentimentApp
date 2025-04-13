@@ -1,50 +1,67 @@
-# Welcome to your Expo app 👋
+# Vietnamese Sentiment Analysis App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native application for analyzing the sentiment of Vietnamese text using the PhoBERT model.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Analyze sentiment of Vietnamese text in real-time
+- Display sentiment classification (Positive, Negative, Neutral)
+- Show confidence scores for each sentiment category
+- Includes example Vietnamese sentences for quick testing
 
-   ```bash
-   npm install
-   ```
+## Technology Stack
 
-2. Start the app
+- React Native / Expo
+- PhoBERT Vietnamese Sentiment Analysis Model (via Hugging Face API)
+- Axios for API requests
 
-   ```bash
-    npx expo start
-   ```
+## Setup and Installation
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+1. **Clone the repository**
 
 ```bash
-npm run reset-project
+git clone <repository-url>
+cd VietnameseSentimentApp
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. **Install dependencies**
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. **Add your Hugging Face API Token**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+You'll need to add your Hugging Face API token in `src/services/sentimentService.ts`:
 
-## Join the community
+```typescript
+const API_TOKEN = 'YOUR_HUGGING_FACE_API_TOKEN_HERE';
+```
 
-Join our community of developers creating universal apps.
+You can obtain a token by creating an account at [Hugging Face](https://huggingface.co/).
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4. **Run the application**
+
+```bash
+npm start
+```
+
+Then, press:
+- `a` for Android
+- `i` for iOS
+- `w` for web
+
+## How to Use
+
+1. Enter Vietnamese text in the input field
+2. Tap the "Analyze Sentiment" button
+3. View the sentiment analysis results below
+4. You can also tap on the example sentences to quickly test the sentiment analysis
+
+## Model Information
+
+This application uses the [wonrax/phobert-base-vietnamese-sentiment](https://huggingface.co/wonrax/phobert-base-vietnamese-sentiment) model from Hugging Face. PhoBERT is a pre-trained language model specifically for Vietnamese text.
+
+## License
+
+MIT
